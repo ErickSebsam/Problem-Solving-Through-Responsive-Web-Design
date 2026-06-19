@@ -415,7 +415,7 @@ footer {
     }
 }
 
-/* Desktop: roomier section padding, solutions get breathing room */
+
 @media (min-width: 960px) {
     main {
         padding: var(--space-6) var(--space-4);
@@ -427,7 +427,7 @@ footer {
     }
 }
 
-/* Small phones: tighten spacing and stack nav links closer */
+
 @media (max-width: 400px) {
     main {
         padding: var(--space-4) var(--space-3);
