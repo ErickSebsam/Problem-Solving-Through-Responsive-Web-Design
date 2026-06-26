@@ -230,66 +230,52 @@
     <!-- =========================
          CONTACT SECTION
     ========================== -->
-    <section id="contact">
-
-      <h2>Contact</h2>
-
+    <h2>Contact</h2>
+    <div class="contact-form">
       <article>
-
         <h3>Get Involved</h3>
-
         <p>
           If you'd like to contribute to building a more accessible web,
           please contact our team.
         </p>
-
         <ul>
           <li><strong>Email:</strong> inclusion@accessibility-project.org</li>
           <li><strong>Phone:</strong> +57 (Bogotá) 555-0192</li>
         </ul>
-
       </article>
+      
+  <form action="#" method="POST">
 
-      <div class="contact-form">
+    <fieldset>
 
-        <form action="#" method="POST">
+      <legend class="sr-only">
+        Contact Information
+      </legend>
 
-          <fieldset>
-
-            <legend class="sr-only">
-              Contact Information
-            </legend>
-
-            <div class="form-group">
-              <label for="name">Name</label>
-
-              <input type="text" id="name" name="name" placeholder="YOUR FULL NAME" required>
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email</label>
-
-              <input type="email" id="email" name="email" placeholder="YOUR@EMAIL.COM" required>
-            </div>
-
-            <div class="form-group">
-              <label for="message">Your Goals</label>
-
-              <textarea id="message" name="message" rows="4" placeholder="WHAT DO YOU WANT TO ACHIEVE?"
-                required></textarea>
-            </div>
-
-          </fieldset>
-
-          <button type="submit" class="submit-btn">
-            SEND REQUEST
-          </button>
-
-        </form>
-
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="YOUR FULL NAME" required>
       </div>
 
-    </section>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="YOUR@EMAIL.COM" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Your Goals</label>
+        <textarea id="message" name="message" rows="4" placeholder="WHAT DO YOU WANT TO ACHIEVE?" required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">
+        SEND REQUEST
+      </button>
+
+    </fieldset>
+
+  </form>
+
+</div>
 
   </main>
 

@@ -389,3 +389,113 @@ footer {
     border: 1px solid var(--color-line);
     margin-top: var(--space-3);
 }
+/* ==========================================================================
+   CONTACT FORM (Arreglado y alineado)
+   ========================================================================== */
+.contact-form {
+  background-color: var(--color-surface);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  padding: var(--space-4);
+}
+
+/* El formulario controla el flujo vertical en móvil */
+.contact-form form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+/* Quitamos los bordes y márgenes del fieldset */
+.contact-form fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-3);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-1);
+}
+
+.form-group label {
+  font-weight: 600;
+  color: var(--color-ink);
+}
+
+.form-group input,
+.form-group textarea {
+  font-family: var(--font-body);
+  font-size: 1rem;
+  padding: var(--space-2) var(--space-3);
+  border: 1px solid var(--color-line);
+  border-radius: var(--radius);
+  background-color: var(--color-paper);
+  color: var(--color-ink);
+  width: 100%;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--color-ink-soft);
+  opacity: 0.6;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--color-accent);
+  outline: none;
+}
+
+/* Botón arreglado con contraste legible */
+.submit-btn {
+  align-self: flex-start;
+  background-color: var(--color-accent);
+  color: var(--color-paper); /* Cambiado a claro para que se lea bien */
+  font-weight: 700;
+  font-family: var(--font-body);
+  border: none;
+  border-radius: var(--radius);
+  padding: var(--space-3) var(--space-5);
+  cursor: pointer;
+  transition: background-color 0.15s ease;
+}
+
+.submit-btn:hover {
+  background-color: var(--color-accent-dark);
+  color: var(--color-paper);
+}
+
+/* ==========================================================================
+   MEDIA QUERIES CORREGIDOS
+   ========================================================================== */
+@media (min-width: 640px) {
+  #problem {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #problem article:first-child {
+    grid-column: 1 / -1;
+  }
+
+  /* El fieldset se vuelve grid para Name y Email */
+  .contact-form fieldset {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--space-3) var(--space-4);
+  }
+
+  /* El textarea ocupa el ancho completo dentro del fieldset */
+  .form-group:last-of-type {
+    grid-column: 1 / -1;
+  }
+
+  /* El botón se queda abajo, alineado a la izquierda de forma natural */
+  .submit-btn {
+    align-self: flex-start;
+  }
+}
